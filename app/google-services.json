@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "488390544044",
+    "firebase_url": "https://timisoara-239fa.firebaseio.com",
+    "project_id": "timisoara-239fa",
+    "storage_bucket": "timisoara-239fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488390544044:android:1d6c892950587f5b",
+        "android_client_info": {
+          "package_name": "com.example.timisoara"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488390544044-9g0n0s3633ghbjvcr1enkmmic87nc57o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.timisoara",
+            "certificate_hash": "a3ddb9729c1d44626623587e5935d8a117d35e21"
+          }
+        },
+        {
+          "client_id": "488390544044-qlkft20h8eugpi1krj9elvlco9g1mvu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVAG3KEreqxgD57W9ktSNEcpJ-fH8HuUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488390544044-qlkft20h8eugpi1krj9elvlco9g1mvu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
