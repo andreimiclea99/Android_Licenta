@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true">
+
+<ViewFlipper
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:id="@+id/flipperid"
+    android:layout_centerInParent="true"
+    android:flipInterval="4000"
+    android:elevation="5dp">
+
+
+</ViewFlipper>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="160dp">
+
+            <TextView
+                android:id="@+id/movie_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold|italic"
+                android:text="Piața Victoriei din Timișoara"
+                android:textColor="@android:color/black"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:id="@+id/movie_description"
+                android:layout_width="wrap_content"
+                android:layout_height="375dp"
+                android:layout_below="@id/movie_name"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingMultiplier="1.2"
+                android:text="@string/victoria"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@android:color/black"
+                android:textSize="13dp" />
+
+
+            <Button
+                android:id="@+id/buton2"
+                android:layout_width="108dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_description"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:text="Detalii"
+                android:textStyle="bold|italic"/>
+
+            <Button
+                android:id="@+id/buton"
+                android:layout_width="115dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/movie_description"
+                android:background="@android:color/transparent"
+                android:layout_alignLeft="@id/buton2"
+                android:layout_alignParentLeft="true"
+                android:text="Share"
+                android:textStyle="bold|italic" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

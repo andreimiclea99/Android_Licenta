@@ -23,11 +23,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    Button b1, b2, singup;
+    Button b1, b2, singup, cancel;
     EditText ed1, ed2;
     TextView tx1;
     int counter = 3;
-    Intent tp, tp2;
+    Intent tp, tp2, tp3;
     Toolbar tollbar;
     ProgressBar progressBar;
     FirebaseAuth firebaseAuth;
@@ -42,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
         tollbar = findViewById(R.id.toolbar2);
         ed1 = findViewById(R.id.editText);
         ed2 = findViewById(R.id.editText2);
-        b2 = findViewById(R.id.button2);
+       b2 = findViewById(R.id.button2);
+        cancel = findViewById(R.id.cancel);
         tx1 = findViewById(R.id.textView3);
         singup = findViewById(R.id.button3);
-        tollbar.setTitle("Login");
+        tollbar.setTitle("Auentificare");
         firebaseAuth = FirebaseAuth.getInstance();
         tx1.setVisibility(View.GONE);
 
@@ -53,15 +54,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 progressBar.setVisibility(View.VISIBLE);
+
+
                 firebaseAuth.signInWithEmailAndPassword(ed1.getText().toString(),
                         ed2.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.GONE);
                         if (task.isSuccessful()) {
-                            //Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
                             tp = new Intent(MainActivity.this, Menu.class);
                             startActivity(tp);
+
                         } else {
                             Toast.makeText(getApplicationContext(), "Wrong Credentials", Toast.LENGTH_SHORT).show();
 
@@ -76,18 +80,23 @@ public class MainActivity extends AppCompatActivity {
                         }
 
                     }
-                    //if (ed1.getText().toString().equals("admin") && ed2.getText().toString().equals("admin")) {
-                    ///Toast.makeText(getApplicationContext(), "Redirecting...", Toast.LENGTH_SHORT).show();
-
 
                 });
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                tp3 = new Intent(MainActivity.this, Reset_Pass.class);
+                startActivity(tp3);
             }
         });
         singup.setOnClickListener(new View.OnClickListener() {

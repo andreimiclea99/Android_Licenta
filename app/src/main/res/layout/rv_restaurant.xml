@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <android.support.v7.widget.CardView
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="135dp"
+        android:id="@+id/card"
+
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:weightSum="10"
+            android:id="@+id/liniar">
+            <ImageView
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/icon"/>
+
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Numele Restaurant"
+                    android:textSize="19sp"
+                    android:textStyle="bold|italic"
+                    android:textColor="#303F9F"/>
+
+            <Button
+                android:id="@+id/buton"
+                android:layout_width="89dp"
+                android:layout_height="26dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:layout_marginBottom="4dp"
+                android:text="Harta"
+                android:textSize="10dp"
+                android:textStyle="bold|italic"
+                android:textColor="#388E3C"/>
+
+            <RatingBar
+                android:id="@+id/rating_rating_bar"
+                
+                android:layout_width="48dp"
+                android:layout_height="31dp"
+                android:layout_above="@id/buton"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/item_name"
+                android:layout_marginRight="31dp"
+                android:layout_marginBottom="21dp"
+                android:numStars="5"
+                android:stepSize=".1" />
+
+            <TextView
+                android:id="@+id/rat_text"
+                android:layout_width="38dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating_rating_bar"
+                android:layout_alignTop="@id/buton"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="-26dp"
+                android:layout_marginRight="30dp"
+                android:text="4.5"
+                android:layout_toLeftOf="@+id/rating_rating_bar"
+                android:layout_toStartOf="@+id/rating_rating_bar"
+                android:textColor="#000000"
+                android:textSize="13sp" />
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+

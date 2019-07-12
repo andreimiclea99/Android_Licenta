@@ -26,18 +26,19 @@
     </android.support.v7.widget.Toolbar>
 
 
-
     <EditText
         android:id="@+id/etemail"
-        android:layout_width="318dp"
-        android:layout_height="34dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
         android:hint="Email"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="137dp" />
+
     <EditText
         android:id="@+id/etpass"
-        android:layout_width="320dp"
-        android:layout_height="23dp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:inputType="textPassword"
         android:hint="Password"
         tools:layout_editor_absoluteX="32dp"
         tools:layout_editor_absoluteY="94dp" />

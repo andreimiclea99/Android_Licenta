@@ -47,7 +47,7 @@ public class SingUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressBar.setVisibility(View.GONE);
                         if(task.isSuccessful()) {
-                            Toast.makeText(SingUp.this, "A mers", Toast.LENGTH_LONG).show();
+                            Toast.makeText(SingUp.this, "Înregistrarea s-a efectuat cu succes!", Toast.LENGTH_LONG).show();
                         }else{
                             Toast.makeText(SingUp.this,task.getException().getMessage(),Toast.LENGTH_LONG).show();
                         }

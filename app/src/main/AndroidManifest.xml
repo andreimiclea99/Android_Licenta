@@ -2,14 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.timisoara">
 
+    <uses-permission android:name="android.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconita"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingUp"></activity>
+        <activity android:name=".material_cal"></activity>
+        <activity android:name=".Calendar_clasa"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".Tab_Evem" />
+        <activity android:name=".Reset_Pass" />
+        <activity android:name=".EventsMain" />
+        <activity android:name=".int_cat" />
+        <activity android:name=".FeedBack" />
+        <activity android:name=".turisticAdapter" />
+        <activity android:name=".obiective_Activity" />
+        <activity android:name=".Opera"
+           />
+        <activity android:name=".Teatru" />
+        <activity android:name=".SingUp" />
         <activity
             android:name=".Menu"
             android:label="@string/title_activity_menu"
@@ -21,6 +38,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Repeating_activity" />
+        <activity android:name=".obiective_turistice" />
+        <activity android:name=".int_sat" />
+        <activity android:name=".restaurante" />
+        <activity android:name=".Calendar_clasa_2"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".Calendar_clasa_events"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".pt_unirii" />
+        <activity android:name=".int_baroque" />
+        <activity android:name=".int_theresia" />
+        <activity android:name=".int_victoria" />
+
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <receiver android:name=".Notification_reciever" />
     </application>
 
 </manifest>

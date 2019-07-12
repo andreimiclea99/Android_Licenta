@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_height="120dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/icon"
+            android:layout_width="120dp"
+            android:layout_height="90dp"
+            android:src="@drawable/timisoara"
+            android:scaleType="centerCrop"
+            android:transitionName="image" />
+
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/buton"
+
+            android:textColor="#00796B"
+            android:textStyle="bold|italic"
+            android:text="Harta"
+            android:layout_alignBottom="@android:id/icon" />
+
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/icon"
+            android:paddingTop="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="?android:textAppearanceMedium"
+            tools:text="Title 1"
+            />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/icon"
+            android:layout_below="@+id/text1"
+            android:padding="8dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textSize="12dp"
+            style="?android:textAppearanceSmall"
+            tools:text="Description goes here" />
+
+    </RelativeLayout>
+
+</FrameLayout>

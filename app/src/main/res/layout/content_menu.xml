@@ -1,64 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".Menu"
-    tools:showIn="@layout/activity_menu">
+    tools:context=".Menu">
 
-    <RelativeLayout
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp">
-        android:id="@+id/relativeLayout"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="Meniul Principal!"
-            android:textSize="25dp" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button1"
+                    android:background="@drawable/teatru2"
+                    android:text="Teatru"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:textColorHint="#FFC107"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button2"
+                    android:background="@drawable/eventsoo"
+                    android:text="Evenimente"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+        </TableRow>
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="192dp"
-            android:layout_height="184dp"
-            android:layout_centerInParent="true"
-            app:srcCompat="@drawable/teatru" />
-    </RelativeLayout>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button3"
+                    android:background="@drawable/muzeul_satului"
+                    android:text="Atractii Turistice"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button4"
+                    android:background="@drawable/restaurants"
+                    android:text="Restaurante"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+        </TableRow>
 
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button5"
+                    android:background="@drawable/opera"
+                    android:text="Opera"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button6"
+                    android:background="@drawable/bega"
+                    android:text="Contact"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"/>
+            </RelativeLayout>
+        </TableRow>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="108dp"
-        android:layout_marginLeft="108dp"
-        android:layout_marginTop="442dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginRight="18dp"
-        android:layout_marginBottom="501dp"
-        android:text="Bilete teatru" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="437dp"
-        android:text="Cancel" />
-
-
-
-</RelativeLayout>
+    </TableLayout>
+</LinearLayout>
